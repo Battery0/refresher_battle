@@ -6,7 +6,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 ruby "3.0.2"
 
-gem 'sinatra', :github => 'sinatra/sinatra'
+gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'webrick'
 gem 'simplecov', require: false, group: :test
 
