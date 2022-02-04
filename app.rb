@@ -12,3 +12,9 @@ end
 get '/reloader_test' do
   "Sinatra::Reloader works!"
 end
+
+get '/cat' do
+  "<div style='border: 3px dashed orange;'>
+    <img src='https://i.imgur.com/jFaSxym.png' alt='Cat'>
+  </div>"
+end
