@@ -19,7 +19,7 @@ get '/random-cat' do
 end
 
 get '/named-cat' do
-  @cat_name = params[:name]
+  @cat_name = params[:cat_name]
   @is_cat_cute = params[:cute]
   erb(:index)
 end

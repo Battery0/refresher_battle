@@ -3,6 +3,19 @@
   <h2>Is the cat cute? <%= @is_cat_cute %> </h2>
 <% end %>
 
+
+<form action="/named-cat">
+  <label for="name">Cat Name</label>
+  <br>
+  <input type="text" id="name" name="cat_name">
+  <br><br>
+  <label for="cute">Is the cat cute?</label>
+  <br>
+  <input type="text" id="cute" name="cute">
+  <br><br>
+  <type="submit" value="Submit">
+</form>
+
 <div>
   <img style='border: 3px dashed orange;' src='https://i.imgur.com/jFaSxym.png' alt='Cat'>
 </div>
