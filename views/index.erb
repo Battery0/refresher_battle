@@ -1,4 +1,6 @@
-<h1>My name is <%= @cat_name %> </h1>
+<% if @cat_name %>
+  <h1>My name is <%= @cat_name %> </h1>
+<% end %>
 
 <div>
   <img style='border: 3px dashed orange;' src='https://i.imgur.com/jFaSxym.png' alt='Cat'>
