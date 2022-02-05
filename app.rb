@@ -20,5 +20,6 @@ end
 
 get '/named-cat' do
   @cat_name = params[:name]
+  @is_cat_cute = params[:cute]
   erb(:index)
 end
