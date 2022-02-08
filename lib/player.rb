@@ -8,4 +8,8 @@ class Player
     @player_name
   end
 
+  def hitpoints
+    50
+  end
+
 end
