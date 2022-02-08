@@ -5,7 +5,7 @@ feature 'As player 1' do
     fill_in('player1', with: 'Dave')
     fill_in('player2', with: 'Jess')
     click_button('Submit Player Names')
-    expect(page).to have_content('Player 2 has 50 HP')
+    expect(page).to have_content('Jess has 50 HP')
   end
 
 end
