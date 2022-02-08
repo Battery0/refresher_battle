@@ -1,2 +1,12 @@
 <h2>Welcome Player 1: <%= @player_1_name %> and Player 2: <%= @player_2_name %>"</h2>
 <h3><%= @player_2_name %> has 50 HP</h3>
+<br>
+<br>
+
+<form action="/attack" method="post">
+  <button type="submit" value="true" name="p1_attack_p2"><%= @player_1_name %> attacks <%= @player_2_name %></button>
+</form>
+
+<% if @p1_attack_p2 %>
+  <h3><%= @player_1_name %> successfully attacked <%= @player_2_name %></h3>
+<% end %>
