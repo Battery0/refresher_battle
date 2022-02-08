@@ -5,8 +5,19 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
-require 'rspec'
 require_relative './features/web_helper'
+require 'rspec'
+require 'simplecov'
+require 'simplecov-console'
+
+#show the test coverage as a percentage when user runs 'rspec' in terminal
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console,
+  # Want a nice code coverage website? Uncomment this next line!
+  # SimpleCov::Formatter::HTMLFormatter
+])
+#Start simplecov
+SimpleCov.start
 
 # tell Capybara about our app class
 Capybara.app = Battle
