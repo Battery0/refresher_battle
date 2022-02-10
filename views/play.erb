@@ -12,3 +12,6 @@
 <% if @p1_attack_p2 %>
   <h1 style="color:red"><%= @game.player_1.name %> successfully attacked <%= @game.player_2.name %></h1>
 <% end %>
+<% if @game.player_2.health == 0 %>
+  <h1 style="color:green"><%= @game.player_1.name %> is the Winner!!!</h1>
+<% end %>
