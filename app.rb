@@ -29,7 +29,9 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
-    $game.attack($game.player_2)
+    @game = $game
+    @game.attack(@game.player_2)
+    @game.switch_turns
     session[:p1_attack_p2] = params[:p1_attack_p2]
     redirect to ('/play')
   end

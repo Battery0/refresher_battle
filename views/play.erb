@@ -1,12 +1,14 @@
-<h2>Welcome Player 1: <%= @game.player_1.name %> and Player 2: <%= @game.player_2.name %>"</h2>
+<h1>Welcome Player 1: <%= @game.player_1.name %> and Player 2: <%= @game.player_2.name %></h1>
+<br>
+<h3><%= @game.current_turn.name %>'s turn...</h3>
+<br>
 <h3><%= @game.player_2.name %> has <%= @game.player_2.health %> HP</h3>
 <br>
 <br>
-
+<br>
 <form action="/attack" method="post">
   <button type="submit" value="true" name="p1_attack_p2"><%= @game.player_1.name %> attacks <%= @game.player_2.name %></button>
 </form>
-
 <% if @p1_attack_p2 %>
-  <h3><%= @game.player_1.name %> successfully attacked <%= @game.player_2.name %></h3>
+  <h1 style="color:red"><%= @game.player_1.name %> successfully attacked <%= @game.player_2.name %></h1>
 <% end %>

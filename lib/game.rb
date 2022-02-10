@@ -3,6 +3,8 @@ class Game
   def initialize(player_one, player_two)
     @player_one = player_one
     @player_two = player_two
+    @current_turn = player_one
+    @turn_count = 1
   end
 
   def player_1
@@ -17,4 +19,14 @@ class Game
     player.damage
   end
 
+  def current_turn
+    @current_turn
+  end
+
+  def switch_turns
+    @turn_count.even? ? @current_turn = @player_one : @current_turn = @player_two
+    @turn_count += 1
+  end
+
 end
+
