@@ -29,4 +29,3 @@ class Game
   end
 
 end
-
