@@ -32,9 +32,11 @@ class Battle < Sinatra::Base
 
   post '/attack' do
     @game = $game
-    @game.attack(@game.player_2)
+    # @game.attack(@game.player_2)
     session[:p1_attack_p2] = params[:p1_attack_p2]
     session[:p2_attack_p1] = params[:p2_attack_p1]
+    @game.attack(@game.player_2) if session[:p1_attack_p2] != nil
+    @game.attack(@game.player_1) if session[:p2_attack_p1] != nil
     @game.switch_turns
     redirect to ('/play')
   end
