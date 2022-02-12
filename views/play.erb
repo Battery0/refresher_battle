@@ -21,3 +21,6 @@
 <% if @game.player_2.health == 0 %>
   <h1 style="color:green"><%= @game.player_1.name %> is the Winner!!!</h1>
 <% end %>
+<% if @game.player_1.health == 0 %>
+  <h1 style="color:green"><%= @game.player_2.name %> is the Winner!!!</h1>
+<% end %>
