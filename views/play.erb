@@ -8,9 +8,15 @@
 <br>
 <form action="/attack" method="post">
   <button type="submit" value="true" name="p1_attack_p2"><%= @game.player_1.name %> attacks <%= @game.player_2.name %></button>
+  <button type="submit" value="true" name="p2_attack_p1"><%= @game.player_2.name %> attacks <%= @game.player_1.name %></button>
 </form>
+<br>
+<br>
+<br>
 <% if @p1_attack_p2 %>
   <h1 style="color:red"><%= @game.player_1.name %> successfully attacked <%= @game.player_2.name %></h1>
+<% elsif @p2_attack_p1 %>
+  <h1 style="color:red"><%= @game.player_2.name %> successfully attacked <%= @game.player_1.name %></h1>
 <% end %>
 <% if @game.player_2.health == 0 %>
   <h1 style="color:green"><%= @game.player_1.name %> is the Winner!!!</h1>
